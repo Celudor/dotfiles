@@ -102,6 +102,7 @@ fi
 alias vim=nvim
 
 . "$HOME/.local/bin/env"
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin:/opt/nvim-linux-x86_64/bin
 
 
 # Generated for envman. Do not edit.
