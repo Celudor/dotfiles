@@ -152,6 +152,7 @@ return {
 			cssls = {},
 			clangd = {},
 			tailwindcss = {},
+			gopls = {},
 			dockerls = {},
 			sqlls = {},
 			terraformls = {},
