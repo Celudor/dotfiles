@@ -101,7 +101,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
 
-. "$HOME/.local/bin/env"
+[ -s "$HOME/.local/bin/env" ] && \. "$HOME/.local/bin/env"
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin:/opt/nvim-linux-x86_64/bin
 
 
