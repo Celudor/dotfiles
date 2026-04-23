@@ -1,0 +1,32 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: check-executables-have-shebangs
+
+  - repo: https://github.com/JohnnyMorganz/StyLua
+    rev: v2.4.1
+    hooks:
+      - id: stylua-github
+        name: Format Lua (StyLua)
+        args:
+          [
+            "--column-width",
+            "120",
+            "--indent-type",
+            "Spaces",
+            "--indent-width",
+            "2",
+          ]
+
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v4.0.0-alpha.8
+    hooks:
+      - id: prettier
+        exclude: ^nvim/\.config/nvim/(lazy-lock\.json|lazyvim\.json)$
+        types_or: [yaml, markdown, json]
