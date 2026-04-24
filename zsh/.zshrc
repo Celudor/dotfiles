@@ -104,6 +104,13 @@ alias vim=nvim
 [ -s "$HOME/.local/bin/env" ] && \. "$HOME/.local/bin/env"
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin:/opt/nvim-linux-x86_64/bin
 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
