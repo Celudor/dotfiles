@@ -99,6 +99,8 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+[ -s "$HOME/.zsh_aliasses" ] && \. "$HOME/.zsh_aliasses"
+
 alias vim=nvim
 
 [ -s "$HOME/.local/bin/env" ] && \. "$HOME/.local/bin/env"
