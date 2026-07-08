@@ -48,15 +48,15 @@ vim.opt.runtimepath:remove("/usr/share/vim/vimfiles") -- Separate Vim plugins fr
 -- vim.opt.foldlevel = 99
 -- vim.opt.foldlevelstart = 1
 -- vim.opt.foldnestmax = 4
-vim.g.clipboard = {
-  name = "WslClipboard",
-  copy = {
-    ["+"] = "clip.exe",
-    ["*"] = "clip.exe",
-  },
-  paste = {
-    ["+"] = "powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw))",
-    ["*"] = "powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw))",
-  },
-  cache_enabled = 0,
-}
+-- vim.g.clipboard = {
+--   name = "WslClipboard",
+--   copy = {
+--     ["+"] = "clip.exe",
+--     ["*"] = "clip.exe",
+--   },
+--   paste = {
+--     ["+"] = "powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw))",
+--     ["*"] = "powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw))",
+--   },
+--   cache_enabled = 0,
+-- }
