@@ -1,0 +1,20 @@
+[user]
+	email = lukasz.stasienko@gmail.com
+	name = Łukasz Stasieńko
+[init]
+	defaultBranch = main
+[merge]
+	conflictstyle = zdiff3
+[push]
+	autoSetupRemote = true
+	default = current
+[pull]
+	rebase = true
+[diff]
+	algorithm = histogram
+[url "https://aur.archlinux.org/"]
+	insteadOf = "aur:"
+[url "git@github.com:"]
+	insteadOf = "https://github.com/"
+[url "git@github.com:"]
+	insteadOf = "gh:"
