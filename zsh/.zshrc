@@ -67,7 +67,7 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git debian docker vscode uv gh)
+plugins=(git docker vscode uv gh gcloud)
 
 source $ZSH/oh-my-zsh.sh
 
