@@ -2,6 +2,12 @@
 import = [
     "~/.config/alacritty/catppuccin-mocha.toml"
 ]
+
 [font]
 normal = { family = "FiraMono Nerd Font", style = "Regular" }
 size = 12
+
+[window]
+opacity = 0.9
+blur = true
+padding = {x=5,y=5}
