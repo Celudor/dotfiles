@@ -12,18 +12,6 @@ end
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 require("lazy").setup({
-  -- require("plugins.neotree"),
-  -- require("plugins.colortheme"),
-  -- require("plugins.bufferline"),
-  -- require("plugins.lualine"),
-  -- require("plugins.treesitter"),
-  -- require("plugins.telescope"),
-  -- require("plugins.lsp"),
-  -- require("plugins.autocompletion"),
-  -- require("plugins.autoformat"),
-  -- require("plugins.gitsigns"),
-  -- require("plugins.indent-blankline"),
-  -- require("plugins.misc"),
   spec = {
     { import = "plugins" },
   },
