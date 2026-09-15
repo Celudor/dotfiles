@@ -9,6 +9,14 @@ return {
       end,
     }
 
+    local project = {
+      "project",
+      format = "name",
+      no_project = "N/A",
+      separator = " ",
+      enclose_pair = { "<", ">" },
+    }
+
     local filename = {
       "filename",
       file_status = true, -- displays file status (readonly status, modified status)
@@ -52,7 +60,7 @@ return {
       sections = {
         lualine_a = { mode },
         lualine_b = { "branch" },
-        lualine_c = { filename },
+        lualine_c = { project, filename },
         lualine_x = {
           diagnostics,
           diff,
