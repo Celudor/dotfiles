@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.font = wezterm.font("FiraCode Nerd Font Mono", { weight = "Bold" })
-config.font_size = 14
+config.font_size = 15
 
 config.color_scheme = "Catppuccin Mocha"
 
