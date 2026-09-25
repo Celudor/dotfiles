@@ -1,7 +1,3 @@
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -11,6 +7,20 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
    export EDITOR='nvim'
 fi
+
+# Options
+setopt append_history
+setopt share_history
+setopt hist_ignore_dups
+setopt hist_expire_dups_first
+setopt hist_find_no_dups
+setopt hist_reduce_blanks
+setopt no_beep
+setopt inc_append_history
+
+HISTFILE=${HOME}/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -28,7 +38,15 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 [ -s "$HOME/.zsh_aliasses" ] && \. "$HOME/.zsh_aliasses"
 
-alias vim=nvim
+alias vim='nvim'
+alias cat='bat'
+alias grep='rg --color=auto'
+
+alias ls='eza --icons=always --group-directories-first'
+alias la='eza --all --icons=always --group-directories-first'
+alias ll='eza --long --all --git --icons=always --group-directories-first'
+alias tree='eza --tree --icons'
+
 
 [ -s "$HOME/.local/bin/env" ] && \. "$HOME/.local/bin/env"
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin:/opt/nvim-linux-x86_64/bin:$HOME/.local/bin
@@ -51,4 +69,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$HOME/.config/bayer/bayer.sh" ] && \. "$HOME/.config/bayer/bayer.sh"
 
 eval "$(zoxide init zsh)"
+eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
